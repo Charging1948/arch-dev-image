@@ -18,7 +18,7 @@ WORKDIR /home/builduser
 
 # Install AUR packages using paru
 RUN paru -S --noconfirm --skipreview \
-	windsurf rstudio-desktop icaclient
+	windsurf icaclient
 
 # Clean up package cache to reduce image size
 RUN paru -Scc --noconfirm || true
