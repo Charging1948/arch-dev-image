@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/arch-toolbox:latest
+FROM ghcr.io/ublue-os/arch-toolbox:latest as toolbox
 
 # Add distrobox label
 LABEL com.github.containers.toolbox="true"
