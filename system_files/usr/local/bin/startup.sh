@@ -14,6 +14,6 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 
 . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
-nix run nixpkgs#home-manager -- switch --flake /home/jk/code/nix/denix-flake#jk@arch-distrobox-bazzite
+nix run nixpkgs#home-manager -- switch --flake /home/jk/code/nix/denix-flake
 
 echo -e "\n\n\nInitial setup complete. Enjoy your new system!"
