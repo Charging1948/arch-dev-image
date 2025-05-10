@@ -5,7 +5,6 @@ LABEL com.github.containers.toolbox="true"
 
 COPY system_files /
 
-# 
 RUN pacman -S --noconfirm systemd git tmux nodejs neovim rustup bat devtools grc fastfetch kwallet uv python python-pip python-pipx fd ripgrep
 
 # Create a temporary build user
@@ -34,4 +33,5 @@ RUN userdel -r builduser && \
 RUN pacman -Scc --noconfirm
 
 
+ENV EDITOR=nvim
 
