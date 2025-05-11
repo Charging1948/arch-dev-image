@@ -7,12 +7,6 @@ COPY system_files /
 
 RUN pacman -S --noconfirm systemd git tmux nodejs neovim rustup bat devtools grc fastfetch kwallet uv python python-pip python-pipx fd ripgrep
 
-RUN curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install linux \
-  --extra-conf "sandbox = false" \
-  --no-start-daemon \
-  --no-confirm
-ENV PATH="${PATH}:/nix/var/nix/profiles/default/bin"
-
 # Create a temporary build user
 RUN useradd -m -s /bin/bash builduser && \
 	echo "builduser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
